@@ -1,4 +1,5 @@
 import algorithms.BinarySearch;
+import algorithms.BinaryTree;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -89,13 +90,24 @@ public class Main {
         int[] arr2 = nums2.clone();
         int[] arr3 = nums2.clone();
         int[] arr4 = nums2.clone();
-        int[] arr5 = nums2.clone();
+        int[] arr5 = nums2 .clone();
 
-        time(() -> bubbleSort(arr1), "Bubble Sort"); //5.9028
-        time(() -> insertionSort(arr2), "Insertion Sort"); //4.563
-        time(() -> mergeSort(arr3, 0, arr3.length - 1), "Merge Sort"); //1.9664
-        time(() -> quickSort(arr4, 0, arr3.length - 1), "Quick Sort"); //1.0175
-        time(() -> selectionSort(arr5), "Selection Sort"); // 3.5456
+//        time(() -> bubbleSort(arr1), "Bubble Sort"); //5.9028
+//        time(() -> insertionSort(arr2), "Insertion Sort"); //4.563
+//        time(() -> mergeSort(arr3, 0, arr3.length - 1), "Merge Sort"); //1.9664
+//        time(() -> quickSort(arr4, 0, arr3.length - 1), "Quick Sort"); //1.0175
+//        time(() -> selectionSort(arr5), "Selection Sort"); // 3.5456
+
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.insert(8);
+        binaryTree.insert(7);
+        binaryTree.insert(12);
+        binaryTree.insert(15);
+        binaryTree.insert(2);
+        binaryTree.insert(5);
+        binaryTree.inOrder();
+        System.out.println();
+        binaryTree.preOrder();
     }
 
     public static void time(Runnable task, String name) {
